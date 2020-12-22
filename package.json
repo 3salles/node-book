@@ -1,0 +1,12 @@
+{
+  "name": "node-book",
+  "version": "1.0.0",
+  "description": "This project was created to learn about Node.js with tests.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "https://github.com/3salles/node-book.git",
+  "author": "Beatriz Salles <beatrizsallesss@gmail.com>",
+  "license": "MIT"
+}
