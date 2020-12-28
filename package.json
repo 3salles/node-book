@@ -1,0 +1,28 @@
+{
+  "name": "node-book",
+  "version": "1.0.0",
+  "description": "This project was created to learn about Node.js with tests.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "https://github.com/3salles/node-book.git",
+  "author": "Beatriz Salles <beatrizsallesss@gmail.com>",
+  "license": "MIT",
+  "scripts" : {
+    "build": "babel src --out-dir dist",
+    "start": "yarn run build && node dist/server.js",
+    "start:dev": "babel-node src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.4",
+    "@babel/core": "^7.7.4",
+    "@babel/node": "^7.7.4",
+    "@babel/preset-env": "^7.7.4"
+  },
+  "dependencies": {
+    "body-parser": "1.15.2",
+    "express": "^4.14.0"
+  }
+}
