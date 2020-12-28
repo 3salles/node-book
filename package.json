@@ -7,6 +7,7 @@
     "build": "babel src --out-dir dist",
     "start": "yarn run build && node dist/server.js",
     "start:dev": "babel-node src/server.js",
+    "test:integration": "NODE_ENV=test mocha --opts test/integration/mocha.opts test/integration/**/*_spec.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": "https://github.com/3salles/node-book.git",
