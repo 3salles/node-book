@@ -1,7 +1,7 @@
 import ProductsController from '../../../src/controllers/products';
 import sinon from 'sinon';
 
-describe('Controllers: Products', () => {
+describe('Routes: Products', () => {
   const defaultProduct = [{
     name: 'Default product',
     description: 'product description',
