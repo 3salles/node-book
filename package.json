@@ -9,7 +9,7 @@
     "start:dev": "babel-node src/server.js",
     "test:integration": "NODE_ENV=test mocha --opts test/integration/mocha.opts test/integration/**/*_spec.js",
     "test:unit": "NODE_ENV=test mocha --opts test/unit/mocha.opts test/unit/**/*_spec.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "yarn run test:unit && yarn run test:integration"
   },
   "repository": "https://github.com/3salles/node-book.git",
   "author": "Beatriz Salles <beatrizsallesss@gmail.com>",
