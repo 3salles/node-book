@@ -1,5 +1,3 @@
-import { response } from "express";
-
 class ProductsController {
   constructor(Product) {
     this.Product = Product;
@@ -14,7 +12,7 @@ class ProductsController {
     }
   }
 
-  async getById(req, res){
+  async getById(req, res) {
     const {
       params: { id }
     } = req;
@@ -22,6 +20,33 @@ class ProductsController {
     try {
       const product = await this.Product.find({ _id: id });
       res.send(product);
+    } catch (err) {
+      res.status(400).send(err.message);
+    }
+  }
+  async create(req, res) {
+    const product = new this.Product(req.body);
+    try {
+      await product.save();
+      res.status(201).send(product);
+    } catch (err) {
+      res.status(422).send(err.message);
+    }
+  }
+
+  async update(req, res) {
+    try {
+      await this.Product.updateOne({ _id: req.params.id }, req.body);
+      res.sendStatus(200);
+    } catch (err) {
+      res.status(422).send(err.message);
+    }
+  }
+
+  async remove(req, res) {
+    try {
+      await this.Product.deleteOne({ _id: req.params.id });
+      res.sendStatus(204);
     } catch (err) {
       res.status(400).send(err.message);
     }

@@ -1,4 +1,3 @@
-import { expect } from 'chai';
 import Product from '../../../src/models/product';
 
 describe('Routes: Products', () => {
@@ -61,9 +60,9 @@ describe('Routes: Products', () => {
   describe('POST /products', () => {
     context('When posting a product', () => {
 
-      it('Should return a new product with status 201', done => {
+      it('Should return a new product with status code 201', done => {
         const customId = '56cb91bdc3464f14678934ba';
-        const newProduct = Object.assign({}, { _id: customId, __v: 0 }, defaultProduct);
+        const newProduct = Object.assign({},{ _id: customId, __v:0 }, defaultProduct);
         const expectedSavedProduct = {
           __v: 0,
           _id: customId,
@@ -72,11 +71,47 @@ describe('Routes: Products', () => {
           price: 100
         };
 
-        request.post('products').send(newProduct).end((err, res) => {
-          expect(res.statusCode).to.eql(201);
-          expect(res.body).to.eql(expectedSavedProduct);
-          done(err);
-        });
+        request
+          .post('/products')
+          .send(newProduct)
+          .end((err, res) => {
+            expect(res.statusCode).to.eql(201);
+            expect(res.body).to.eql(expectedSavedProduct);
+            done(err);
+          });
+      });
+    });
+  });
+
+  describe('PUT /products/:id', () => {
+    context('When editing a product', () => {
+      it('Should update the product and return 200 as status code', done => {
+        const customProduct = {
+          name: 'Custom name'
+        };
+        const updatedProduct = Object.assign({}, customProduct, defaultProduct)
+
+        request
+          .put(`/products/${defaultId}`)
+          .send(updatedProduct)
+          .end((err, res) => {
+            expect(res.status).to.eql(200);
+            done(err);
+          });
+      });
+    });
+  });
+
+  describe('DELETE /products/:id', () => {
+    context('When deleting a product', () => {
+      it('Should delete a product and return 204 as status code', done => {
+
+        request
+          .delete(`/products/${defaultId}`)
+          .end((err, res) => {
+            expect(res.status).to.eql(204);
+            done(err);
+          });
       });
     });
   });
