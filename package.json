@@ -9,7 +9,12 @@
     "start:dev": "babel-node src/server.js",
     "test:integration": "NODE_ENV=test mocha --opts test/integration/mocha.opts test/integration/**/*_spec.js",
     "test:unit": "NODE_ENV=test mocha --opts test/unit/mocha.opts test/unit/**/*_spec.js",
-    "test": "yarn run test:unit && yarn run test:integration"
+    "test": "yarn run test:unit && yarn run test:integration",
+    "lint": "eslint src --ext .js",
+    "lint:fix": "eslint src --fix --ext .js",
+    "prettier:list": "prettier --check 'src/**/*.js'",
+    "prettier:fix": "prettier --write 'src/**/*.js'",
+    "style:fix": "yarn run lint:fix & yarn run prettier:fix"
   },
   "repository": "https://github.com/3salles/node-book.git",
   "author": "Beatriz Salles <beatrizsallesss@gmail.com>",
