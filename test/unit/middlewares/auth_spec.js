@@ -1,4 +1,6 @@
-'config';
+import authMiddleware from '../../../src/middlewares/auth';
+import jwt from 'jsonwebtoken';
+import config from 'config';
 
 describe('AuthMiddleware', () => {
   it('Should verify a JWT token and call the next middleware', done => {
@@ -31,5 +33,4 @@ describe('AuthMiddleware', () => {
     const resFake = {};
     authMiddleware(reqFake, resFake, done);
   });
-
 });
