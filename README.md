@@ -59,11 +59,11 @@ Clone este repositório:
 ```bash
 $ git clone https://github.com/3salles/node-book.git
 
-# Entre nas pasta node-book:
+# Entre na pasta node-book:
 
 $ cd node-book
 
-# E instale as dependeências com o seguinte ccomando:
+# E instale as dependeências com o seguinte comando:
 
 $ yarn install
 ```
@@ -77,7 +77,7 @@ $ yarn start
 ```
 ### :white_check_mark: Rodando os Testes
 
-Para rodar os testes em conjunto, rode os eguinte comando:
+Para rodar todos os testes:
 
 ```bash
 $ yarn test
