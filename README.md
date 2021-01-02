@@ -54,6 +54,8 @@ Este projeto usa [Node.js](https://nodejs.org/en/) e [Yarn](https://yarnpkg.com)
 
 ### :construction: Pré-requisitos
 
+Clone este repositório:
+
 ```bash
 $ git clone https://github.com/3salles/node-book.git
 
