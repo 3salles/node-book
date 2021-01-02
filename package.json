@@ -1,0 +1,45 @@
+{
+  "name": "node-book",
+  "version": "1.0.0",
+  "description": "This project was created to learn about Node.js with tests.",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src --out-dir dist",
+    "start": "yarn run build && node dist/server.js",
+    "start:dev": "babel-node src/server.js",
+    "test:integration": "NODE_ENV=test mocha --opts test/integration/mocha.opts test/integration/**/*_spec.js",
+    "test:unit": "NODE_ENV=test mocha --opts test/unit/mocha.opts test/unit/**/*_spec.js",
+    "test": "yarn run test:unit && yarn run test:integration",
+    "lint": "eslint src --ext .js",
+    "lint:fix": "eslint src --fix --ext .js",
+    "prettier:list": "prettier --check 'src/**/*.js'",
+    "prettier:fix": "prettier --write 'src/**/*.js'",
+    "style:fix": "yarn run lint:fix & yarn run prettier:fix"
+  },
+  "repository": "https://github.com/3salles/node-book.git",
+  "author": "Beatriz Salles <beatrizsallesss@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.7.4",
+    "@babel/core": "^7.7.4",
+    "@babel/node": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "babel-eslint": "^10.0.3",
+    "chai": "^4.2.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-node": "^10.0.0",
+    "mocha": "^6.2.2",
+    "prettier": "^1.19.1",
+    "sinon": "^7.5.0",
+    "supertest": "^4.0.2"
+  },
+  "dependencies": {
+    "bcrypt": "^3.0.7",
+    "body-parser": "1.15.2",
+    "config": "^1.29.4",
+    "express": "^4.14.0",
+    "express-acl": "^2.0.2",
+    "jsonwebtoken": "8.3.0",
+    "mongoose": "^5.7.13"
+  }
+}
