@@ -9,33 +9,32 @@
 </p>
 
 <p align="center">
-  Uma API criada para estudar Node com teste.
+  This is an API created to study tests with NodeJS.
   <br />
   <br />
-  <a href="README-en.md">🇺🇸Inglês</a>
+  <a href="README.md">🇺🇸English</a>
    ·
-  <a href="README.md">🇧🇷Português</a>
+  <a href="README-pt.md">🇧🇷Portuguese</a>
 </p>
 
 <!-- TABLE OF CONTENTS -->
 # :card_file_box: Tabela de Conteúdos
-* [Sobre o Projeto](#book-sobre-o-projeto)
-  * [Tecnologias](#computer-tecnologias)
-* [Instalação](#bricks-instalaçao)
-  * [Pré-requisitos](#construction-pré-requisitos)
-    * [Instalando Dependências](#construction-instalando-dependências)
-    * [Rodando o Back-end](#arrow_forward-rodando-o-back-end)
-    * [Rodando os Testes](#white_check_mark-rodando-os-testes)
-    * [Formatando o Código](#nail_care-formatando-o-código)
-* [Licença](#page_facing_up-licença)
-* [Autora](#woman_technologist-autora)
+* [About the Project](#book-about-the-project)
+  * [Technologies](#computer-technologies)
+* [Installation](#bricks-installation)
+  * [Prerequisites](#construction-prerequisites)
+    * [Installing Dependencies](#construction-installing-dependencies)
+    * [Running Back-end](#arrow_forward-running-back-end)
+    * [Running Tests](#white_check_mark-running-tests)
+    * [Formatting Code](#nail_care-formatting-Code)
+* [License](#page_facing_up-license)
+* [Author](#woman_technologist-author)
 
-## :book: Sobre o Projeto
+## :book: About The Project
 
-Node Book API é um projeto desenvolvido para fins de estudo de NodeJS com testes
-baseado no livro [Construindo API's Testáveis com NodeJS] de Waldemar Neto. Aprendendo e aplicando os conceitos de TDD e BDD, além de uso de encriptografia para geração de senhas.
+Node Book API is a project developed to study about NodeJS and tests based on book[Construindo API's Testáveis com NodeJS] by Waldemar Neto. I learned and applied TDD and BDD concepts.
 
-### :computer: Tecnologias
+### :computer: Technologies
 
 * [Node.js](https://nodejs.org/en/)
 * [Yarn](https://yarnpkg.com)
@@ -48,76 +47,80 @@ baseado no livro [Construindo API's Testáveis com NodeJS] de Waldemar Neto. Apr
 * [Prettier](https://prettier.io)
 * [Bcrypt](https://www.npmjs.com/package/bcrypt)
 
-## :bricks: Instalação
+## :bricks: Installation
 
-Este projeto usa [Node.js](https://nodejs.org/en/) e [Yarn](https://yarnpkg.com), você precisa deles para construir as dependências dele.
 
-### :construction: Pré-requisitos
+This project uses [Node.js](https://nodejs.org/en/) and [Yarn](https://yarnpkg.com), you will need them to build its dependencies.
 
-Clone este repositório:
+
+### :construction: Prerequisites
+
+Clone this repository
 
 ```bash
 $ git clone https://github.com/3salles/node-book.git
 
-# Entre na pasta node-book:
+# Enter in node-book folder:
 
 $ cd node-book
 
-# E instale as dependeências com o seguinte comando:
+# And install the dependencies with the following command:
 
 $ yarn install
 ```
 
-### :arrow_forward: Rodando o Back-end
+### :arrow_forward: Running Back-end
 
-Rode o seguinte comando para iniciar o back-end:
+Run the following command to start the back-end:
 
 ```bash
 $ yarn start
 ```
-### :white_check_mark: Rodando os Testes
 
-Para rodar todos os testes:
+### :white_check_mark: Running Testes
+
+Running all tests:
 
 ```bash
 $ yarn test
 ```
 
-Para rodar os testes unitários:
+Running unit tests:
 
 ```bash
 $ yarn tes:unit
 ```
 
-Para rodar os testes de integração:
+Running integration tests:
 
 ```bash
 $ yarn test:integration
 ```
 
-### :nail_care: Formatando o Código
+### :nail_care: Formatting  Code
 
-Para formatar o código usando o Prettier e Eslint, rode os comandos:
+Formatting the code using Prettier and Eslint, run the following commands:
 
 ```bash
-# Para ver os arquivos com erros de sintaxe
+# Search sintax errors files
 $ yarn lint
 
-# Para corrigir estes erros
+# Fixing these errors
 
 $ yarn lint:fix
 
-# Parar ver os arquivos com erros de formatação
+# Search formartting errors files
 
 $ yarn prettier:list
 
-# Para corrigir estes erros
+# Fixing these errors
 
 $ yarn prettier:fix
 ```
+
 ## :page_facing_up: Licença
 
-Este projeto está sob a lincença [MIT](https://github.com/3salles/node-book/blob/master/LICENSE.md).
+This project uses[MIT](https://github.com/3salles/node-book/blob/master/LICENSE.md) lincense.
 
 ## ‍:woman_technologist: Autora
 
