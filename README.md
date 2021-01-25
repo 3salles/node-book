@@ -18,7 +18,7 @@
 </p>
 
 <!-- TABLE OF CONTENTS -->
-# :card_file_box: Tabela de Conteúdos
+# :card_file_box: Table of Contents
 * [About the Project](#book-about-the-project)
   * [Technologies](#computer-technologies)
 * [Installation](#bricks-installation)
@@ -118,11 +118,11 @@ $ yarn prettier:list
 $ yarn prettier:fix
 ```
 
-## :page_facing_up: Licença
+## :page_facing_up: License
 
 This project uses[MIT](https://github.com/3salles/node-book/blob/master/LICENSE.md) lincense.
 
-## ‍:woman_technologist: Autora
+## ‍:woman_technologist: Author
 
 <p align="center">
   <a href="https://github.com/3salles"><img src="https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white&link=https://github.com/3salles" alt="Github" /></a>
